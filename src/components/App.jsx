@@ -31,7 +31,7 @@ export class App extends Component {
     );
 
     return (
-      <Box>
+      <Box width="container" mx="auto" py={5} px={4}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}

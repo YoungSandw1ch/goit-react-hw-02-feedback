@@ -1,5 +1,11 @@
 export const theme = {
   colors: {
+    autumnOrange: {
+      pumpkin: '#D55448',
+      melon: '#FFA577',
+      cotton: '#F9F9FF',
+      hotChoko: '#896E69',
+    },
     white: '#ffffff',
     black: '#000000',
     online: 'green',
@@ -66,23 +72,9 @@ export const theme = {
   },
 
   sizes: {
-    button: '25px',
-    chip: '15px',
-    half: '50px',
-    one: '100px',
-    two: '200px',
-    friends: '298px',
-    three: '300px',
-    four: '400px',
-    five: '500px',
-    profile: '350px',
     container: '1030px',
-    avatar: '150px',
-    friendsAvatar: '60px',
-    statistic: '80px',
-    card: '650px',
-    item: '32px',
-    value: '20px',
+    section: '700px',
+    full: '100%',
   },
 
   shadows: {
