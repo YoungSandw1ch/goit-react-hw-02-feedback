@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box } from 'components/Common';
 import { Button } from './FeedbackOptions.styled';
 
@@ -19,4 +20,12 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       ))}
     </Box>
   );
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.exact({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
 };
