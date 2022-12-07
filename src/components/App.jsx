@@ -19,6 +19,9 @@ export class App extends Component {
     return state.good * Math.round(100 / total);
   };
 
+  leaveFeedback = name =>
+    this.setState(prev => ({ ...prev, [name]: prev[name] + 1 }));
+
   render() {
     const { good, bad, neutral } = this.state;
     const total = this.countTotalFeedback(this.state);
@@ -30,7 +33,10 @@ export class App extends Component {
     return (
       <Box>
         <Section title="Please leave feedback">
-          <FeedbackOptions options={this.state} onLeaveFeedback={''} />
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.leaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           {total ? (
