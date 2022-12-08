@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types';
 import { Box } from 'components/Common';
-import { Button } from './FeedbackOptions.styled';
+import { Button, Good, Bad, Neutral } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const optionsNames = Object.keys(options);
-  const handleFeedback = e => onLeaveFeedback(e.target.name);
+  const handleFeedback = e => onLeaveFeedback(e.currentTarget.name);
+  const icons = [<Good />, <Neutral />, <Bad />];
 
   return (
-    <Box>
-      {optionsNames.map(option => (
+    <Box display="flex" justifyContent="center" gridGap={6}>
+      {optionsNames.map((option, ind) => (
         <Button
           type="button"
           name={option}
           key={option}
           onClick={handleFeedback}
         >
-          {option}
+          {icons[ind]}
         </Button>
       ))}
     </Box>

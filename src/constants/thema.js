@@ -8,8 +8,13 @@ export const theme = {
     },
     white: '#ffffff',
     black: '#000000',
+    green: 'green',
+    red: 'red',
+    blue: '#55BAD2',
+    orange: 'orange',
     online: 'green',
     ofline: 'red',
+    buttonGrey: '#8b939f',
     secondWhite: '#f6ffff',
     fistFontColor: '#2a2a2a',
     greyFontColor: '#969191',
@@ -73,7 +78,7 @@ export const theme = {
 
   sizes: {
     container: '1030px',
-    section: '700px',
+    section: '500px',
     full: '100%',
   },
 
